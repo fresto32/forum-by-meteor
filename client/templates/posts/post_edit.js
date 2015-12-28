@@ -21,7 +21,9 @@ Template.postEdit.events({
         Router.go('postPage', {_id: result._id});
 
     });
+  },
 
+//The following is Discovering Meteor's code
 /*    Posts.update(currentPostId, {$set: postProperties}, function(error) {
       if (error) {
         // display the error to the user
@@ -30,7 +32,6 @@ Template.postEdit.events({
         Router.go('postPage', {_id: currentPostId});
       }
     });*/
-  },
 
   'click .delete': function(e) {
     e.preventDefault();
