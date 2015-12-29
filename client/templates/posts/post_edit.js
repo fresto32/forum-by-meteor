@@ -12,11 +12,11 @@ Template.postEdit.events({
     Meteor.call('postEdit', postProperties, currentPostId, function(error, result){
         //display the error and report it
         if(error)
-          return alert(error.reason);
+          return throwError(error.reason);
 
         //route to the identical URL post
         if(result.postExists)
-          alert('This link has already been posted');
+          throwError('This link has already been posted');
 
         Router.go('postPage', {_id: result._id});
 
