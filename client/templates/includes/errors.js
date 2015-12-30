@@ -4,6 +4,7 @@ Template.errors.helpers({
   }
 });
 
+//When the error template is rendered, delete the document after 3s
 Template.error.onRendered(function() {
   var error = this.data;
   Meteor.setTimeout(function () {
